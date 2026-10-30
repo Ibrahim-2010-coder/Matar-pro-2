@@ -1,41 +1,82 @@
-# 🌧️ Matar Pro (v15) — The Integrated Weather Enterprise App
+# Matar Pro (مَطَر برو) 🌧️
 
-[![Production Ready](https://shields.io)](https://github.com)
-[![Audit Score](https://shields.io)](#-independent-engineering-audit)
-[![Architecture](https://shields.io)](#-architectural-highlights)
+An all-in-one climate intelligence platform featuring hourly forecasts, a Windy-styled interactive radar map, a smart advisory for agriculture & road safety, and 7-month seasonal outlooks. Built entirely within a single-file architecture with full PWA offline capabilities.
 
-**Matar Pro (v15)** هو تطبيق طقس ويب تقدمي (PWA) متكامل وموجه للقطاعات الحيوية (الزراعة، الشحن، والملاحة)، مصمم بالكامل ليعمل كـ **ملف ويب واحد (Single-File Architecture)** وبكفاءة كاملة دون اتصال بالإنترنت (Offline-First).
+🚀 **Live Demo:** [https://github.io](https://github.io)
 
 ---
 
-## 📜 التقييم الهندسي المعتمد | Certified Engineering Audit
-حاز هذا الإصدار (v15) على تقييم **9.6 / 10** بموجب تقرير الفحص الفني الشامل رقم `QA-2026-1425-MTR` الصادر في أكتوبر 2026، والمعتمد رسمياً من مركز تقييم واعتماد هندسة البرمجيات (**SECC / ITIDA — Egypt**).
+## 🧑‍💻 Behind the Code: Meet the Developer
+This platform was designed, engineered, and built from scratch by **Ibrahim Ahmed Z. Nada**. 
+* 🇪🇬 **Origin:** Egypt
+* 🎂 **Age:** 16 Years Old
+* 🏫 **Current Academic Status:** High School Student in the Egyptian **Thanaweya Amma (ثانوية عامة)** system.
 
-### 📊 Score Breakdown (توزيع الدرجات):
-* **Features & Modules:** 10.0 / 10 (6 Smart Advisor surfaces, 29 interactive GIS map layers).
-* **Security & Sandboxing:** 9.7 / 10 (Hash-Signed CSP, Strict textContent AI pathway).
-* **Design & UX:** 9.7 / 10 (Responsive sliding sidebar, Microsoft-style minimalist modern grid).
-* **Code Quality & Integrity:** 9.5 / 10 (11,461 lines in one IIFE wrapper, 17 built-in self-tests).
-
----
-
-## ⚡ الميزات التقنية والتصميمية | Key Engineering Features
-
-* **🤖 6-Surface Smart Advisor System:** نظام مستشار ذكي يدمج بين محرك منطق محلي (Local Engine) ونماذج لغوية خارجية (Keyless Mistral LLM via Pollinations) لصياغة نصائح كلامية بأسلوب بشري يخدم المزارعين والسائقين.
-* **🌐 Offline-First & Browser AI:** عند انقطاع الشبكة، يتحول التطبيق صامتاً لتشغيل محرك ذكاء اصطناعي محلي بالكامل داخل المتصفح **(Local ONNX Engine via Transformers.js)** لتوليد التقارير دون سيرفر.
-* **🛡️ Hardened Security Model:** إغلاق ثغرات حقن كود الـ AI تماماً عبر مسار `textContent` الصارم، وتأمين الملف بالكامل عبر سياسة أمان محتوى (Strict CSP) موقعة بـ 4 شفرات تشفير **(SHA-256 Hashes)**.
-* **🌍 Sectoral Value (القيمة القطاعية):** طقس مخصص لخدمة المزارعين (رطوبة التربة بـ 4 أعماق)، وطقس الطرق لحماية الشاحنات من الشبورة والرياح الجانبية المفاجئة.
+*Building a highly complex, single-file geospatially reactive web application while navigating the intensive Egyptian high school curriculum was an incredible challenge, but 'Matar Pro' stands as proof of what independent student developers can achieve!*
 
 ---
 
-## 🛠️ Built With (التقنيات المستخدمة)
-* **Frontend:** Vanilla HTML5, CSS3 Custom Variables, JavaScript (ES6+ / Web Workers / Canvas API).
-* **Map & GIS Data:** Leaflet.js, Open-Meteo API, NASA GIBS Satellite Tiles, RainViewer Radar, OSRM Routing.
-* **Local Machine Learning:** ONNX Runtime Web / Transformers.js.
+## 🔥 Key Architectural Marvel: Single-File Build
+Unlike traditional web apps broken down into dozens of components, massive node modules, build pipelines, and server-side configurations, **Matar Pro runs entirely inside a single standalone HTML file**. 
+* **Zero Build Steps:** No Webpack, Vite, npm, or installation scripts required.
+* **Zero Costly API Keys:** Completely leverages open-source data streams client-side.
+* **Ultimate Portability:** The entire application can be saved locally as a single document and run directly off-the-grid.
 
 ---
 
-## 👨‍💻 Developer & Project Context
-* **Developed by:** Ibrahim Ahmed Z. Nada (16 Years Old)
-* **Academic Status:** Egyptian Thanaweya Amma Student (General Secondary — Software Engineering Track) | طالب بالثانوية العامة المصرية (شعبة علمي رياضة / هندسة برمجيات).
-* **Project Trajectory:** Built over 3 months of rigorous structural iterations alongside school curriculum constraints to push the boundaries of what browser edge-computing can achieve inside a serverless single-file architecture.
+## 💡 Complete Feature Breakdown
+
+### 🗺️ Interactive Windy-Style Map (The Grand Canvas)
+* **Sleek Interface:** Rendered over a dark-oil styled canvas using Leaflet maps.
+* **25+ Live Environmental Layers:** Access radar feeds, infrared satellites, real-time wind particle streams on all altitudes, total rainfall accumulations, snow updates, wet-bulb temperatures, cloud heights, sea wave swells, ocean currents, and air quality pollutants (PM2.5, Dust, $NO_2$, Ozone).
+* **Radar Customization:** 8 distinct atmospheric styling color palettes (including Dark Sky, NEXRAD Level III, Meteored, and The Weather Channel styles) with custom layer transparency controls.
+* **Time Machine Playback (Nowcasting):** Animated time-loop controls tracking real-time rainfall projections minute-by-minute synced directly with planetary wind shifts.
+
+### 🚜 Smart Agrometeorology Tracker (Precision Farming)
+* **Soil Telemetry Matrix:** Tracks active ground temperature and soil moisture levels across 4 distinct depth segments simultaneously (Surface 0cm, 6cm, 18cm, and 54cm).
+* **48-Hour Irrigation Balancing Calculator:** Automatically cross-references incoming rainfall aggregates (in mm) against local reference evapotranspiration rates ($ET_0$) to yield an instant, color-coded watering decision.
+* **Automated Agro-Advisor:** Generates human-like agronomic insights concerning localized frost warnings, dangerous wind thresholds, UV exposure ceilings, and plant hydration statuses.
+* **7-Day Agriculture Schedule:** A comprehensive tabular chart visualizing daily farming risk indices, temperature spans, and weather patterns.
+
+### 🚗 Route Planning & Transit Safety Analytics
+* **Global Route Profiling:** Input any start and end point globally to automatically chart your active highway coordinates via the Open Source Routing Machine (OSRM).
+* **Chronological Forecast Syncing:** Intelligently maps weather forecasts across your route to match the precise time you will cross each driving checkpoint (Departure, Mid-point, and Destination).
+* **Smart Driving Assistant:** Scans ahead to display conversational voice prompts warning you about low visibility fog, sudden crosswinds, hydroplaning hazards, or severe dust storms.
+* **Safety Hub Mapping:** Automatically reveals medical facilities, hospitals, fuel docks, and safe resting stops along your active route when an extreme weather warning triggers.
+
+### 📊 Long-Range Seasonal Outlooks & Historical Climate Registry
+* **7-Month Extended View:** Employs advanced Copernicus SEAS5 models to chart ambient temperature anomalies and rainfall tendencies across the next 7 months.
+* **20-Year Climate Matrix:** Compares today's live temperature metrics directly with local climate baselines aggregated across the last two decades.
+* **30-Day Daily Projections:** Delivers traditional month-ahead calendar matrix tracking global historical patterns.
+
+### 🏃‍♂️ "Your Day Today" (Custom Activity Dashboards)
+* **Athletic Performance Efficiency:** Computes real-time thermal stress and humidity metrics to give outdoor runners, cyclists, and fitness enthusiasts a 1-100 time efficiency score.
+* **Aviation & Drone Flight Clearances:** Maps crosswind vectors at key atmospheric aviation pressure points (from ground up to 300 hPa / Flight Level 9000m) with instantaneous go/no-go indicators for drone operators.
+* **Marine Safety & Angling Projections:** Monitors wave heights, wave periods, and barometric pressure trends to predict fish activity levels and declare swimming safety.
+* **Health & Allergen Monitor:** Offers medical guidance alerts regarding high pollen, air pollution indices, migraine triggers, and abrupt weather transitions.
+
+### 🔋 Eco-Toggle & System Resource Preserver
+* Fully purges canvas animation nodes, heavy Leaflet instances, and reactive scripting from phone memory with a single click.
+* Dynamically swaps graphic displays for high-contrast, text-only typography to conserve battery power and preserve roaming data packages for rural farmers or off-grid travelers.
+
+### 📱 PWA Infrastructure & Offline-First Persistence
+* Fully compliant Progressive Web App structure, allowing native installation onto Android and iOS home screens.
+* **Integrated Push Alerts:** Native device alerting protocols notifying users of unexpected frost, severe thunderstorms, extreme winds, or sudden blinding fog.
+* **Persistent Offline Mode:** When your mobile internet connection drops, the system unrolls a persistent offline layout containing the last successfully pulled weather report alongside a striking orange countdown clock documenting the data's exact age.
+
+---
+
+## 🛠️ Technical Stack
+* **Core Languages:** Vanilla JavaScript (ES6+), CSS3, Semantic HTML5.
+* **Mapping Framework:** Leaflet.js (Leaflet Routing Machine & Canvas particle layers).
+* **Meteorological Raw Feeds:** Open-Meteo API.
+* **Radar Processing Arrays:** RainViewer API.
+* **Global Highway Routing:** OSRM (Open Source Routing Machine).
+
+---
+
+## ⚖️ License
+Distributed under the **GNU General Public License v3.0 (GPL-3.0)**. See the `LICENSE` file for details.
+
+---
+*Developed with 💻 and ☕ by Ibrahim Ahmed Z. Nada (2026)*
